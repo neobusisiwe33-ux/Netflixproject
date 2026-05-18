@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META & FAVICON -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix – Watch TV Shows Online, Watch Movies Online</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="imgnetflix/netflixicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel ="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header id="main-header">
+    <a href="#" class="logo-link" aria-label="Netflix Home">
+        <img
+                class="logo-img"
+                src="imgnetflix/netflixicon.png"
+                alt="Netflix Logo"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+    </a>
+
+    <nav>
+        <select class="lang-select" aria-label="Choose language">
+            <option value="en">English</option>
+            <option value="af">Afrikaans</option>
+            <option value="zu">Zulu</option>
+            <option value="xh">Xhosa</option>
+        </select>
+        <button class="btn-signin" onclick="openModal()">Sign In</button>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <img
+            src="https://assets.nflxext.com/ffe/siteui/vlv3/435e8bb8-7f1b-49cb-8da8-bff997124294/web/ZA-en-20260511-TRIFECTA-perspective_9e8c1c43-f97e-4f1d-929b-9e33c2546363_large.jpg"
+            alt="Netflix Banner"
+            class="hero-banner-img">
+
+    <div class="hero-overlay-top"></div>
+    <div class="hero-overlay-bottom"></div>
+
+    <div class="hero-content">
+        <h1>Unlimited movies,<br>TV shows and more</h1>
+        <p>Starts at R49. Cancel at any time.</p>
+        <p class="sub">Ready to watch? Enter your email to create or restart your membership.</p>
+
+        <div class="get-started-form">
+            <label class="form-label" for="hero-email">
+                Enter your email address to get started
+            </label>
+            <div class="email-row">
+                <input
+                        type="email"
+                        id="hero-email"
+                        name="email"
+                        placeholder="Email address"
+                        aria-label="Email address"
+                        autocomplete="email">
+                <button class="btn-getstarted" onclick="heroGetStarted()">
+                    Get Started
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- VIDEO SECTION -->
+<section class="section" id="trailer" aria-label="Video section">
+    <div class="video-card">
+        <div class="video-header">
+            <h2>Trailer: Bunny Animation</h2>
+        </div>
+
+        <div class="video-wrap">
+            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1517602302552-471fe67acf66?auto=format&fit=crop&w=1200&q=60">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                Sorry, your browser does not support embedded videos.
+            </video>
+        </div>
+    </div>
+</section>
+
+<!-- PLANS TABLE -->
+<section class="plans-section">
+    <h2>Choose Your Plan</h2>
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Mobile (R49)</th>
+                <th>Basic (R99)</th>
+                <th>Standard (R159)</th>
+                <th>Premium (R219)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Monthly price</td>
+                <td>R49</td>
+                <td>R99</td>
+                <td>R159</td>
+                <td>R219</td>
+            </tr>
+            <tr>
+                <td>Video quality</td>
+                <td>Good</td>
+                <td>Good</td>
+                <td>Great (1080p)</td>
+                <td>Best (4K + HDR)</td>
+            </tr>
+            <tr>
+                <td>Screens at once</td>
+                <td>1</td>
+                <td>1</td>
+                <td>2</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Watch on TV</td>
+                <td>✗</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Downloads</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Spatial Audio</td>
+                <td>✗</td>
+                <td>✗</td>
+                <td>✗</td>
+                <td>✓</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- FAQ SECTION -->
+<section class="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-list">
+        <details>
+            <summary>What is Netflix?</summary>
+            <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more — on thousands of internet-connected devices.</p>
+        </details>
+
+        <details>
+            <summary>How much does Netflix cost?</summary>
+            <p>Plans start from R49 per month depending on your chosen plan. Watch on your smartphone, tablet, Smart TV, laptop, or streaming device.</p>
+        </details>
+
+        <details>
+            <summary>Where can I watch Netflix?</summary>
+            <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com.</p>
+        </details>
+
+        <details>
+            <summary>How do I cancel my subscription?</summary>
+            <p>Netflix is flexible. There are no annoying contracts and no commitments. Cancel online in two clicks.</p>
+        </details>
+
+        <details>
+            <summary>What can I watch on Netflix?</summary>
+            <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more.</p>
+        </details>
+
+        <details>
+            <summary>Is Netflix good for kids?</summary>
+            <p>The Netflix Kids experience is included in your membership with PIN-protected parental controls.</p>
+        </details>
+
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- FOOTER -->
+<footer>
+    <p class="footer-contact">
+        Questions? Call <a href="tel:0681473882">0681473882</a>
+    </p>
+
+    <div class="footer-links">
+        <a href="#">FAQ</a>
+        <a href="#">Help Centre</a>
+        <a href="#">Account</a>
+        <a href="#">Media Centre</a>
+        <a href="#">Investor Relations</a>
+        <a href="#">Jobs</a>
+        <a href="#">Ways to Watch</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy</a>
+        <a href="#">Cookie Preferences</a>
+        <a href="#">Corporate Information</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Speed Test</a>
+        <a href="#">Legal Notices</a>
+        <a href="#">Netflix Originals</a>
+        <a href="#">Only on Netflix</a>
+    </div>
+</footer>
+
+<!-- SIGN IN MODAL -->
+<div id="modal-signin" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">×</span>
+        <h2>Sign In</h2>
+        <form onsubmit="event.preventDefault(); handleSignIn();">
+            <input type="email" id="si-email" placeholder="Email" required>
+            <input type="password" id="si-pass" placeholder="Password" required>
+            <p id="si-error" style="display:none; color:red;">Please enter both email and password</p>
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', function () {
+        header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    function openModal() {
+        document.getElementById('modal-signin').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        document.getElementById('modal-signin').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    document.getElementById('modal-signin').addEventListener('click', function (e) {
+        if (e.target === this) closeModal();
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+    });
+
+    function heroGetStarted() {
+        var email = document.getElementById('hero-email').value.trim();
+        if (!email) {
+            alert('Please enter your email address.');
+            return;
+        }
+        openModal();
+    }
+
+    function handleSignIn() {
+        var email = document.getElementById('si-email').value.trim();
+        var pass  = document.getElementById('si-pass').value.trim();
+        var err   = document.getElementById('si-error');
+
+        if (!email || !pass) {
+            err.style.display = 'block';
+            return;
+        }
+
+        err.style.display = 'none';
+        alert('Welcome back! (Demo)');
+        closeModal();
+    }
+</script>
+
+</body>
+</html>
